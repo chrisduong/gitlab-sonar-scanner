@@ -1,6 +1,8 @@
 gitlab-sonar-scanner
 ====================
 
+**Forked from** [gitlab-sonar-scanner](https://github.com/ciricihq/gitlab-sonar-scanner).
+
 [![pulls][docker hub svg]][docker hub]
 
 Container to be used with [sonar gitlab plugin][].
@@ -16,7 +18,7 @@ stages:
 
 sonarqube:
   stage: analysis
-  image: ciricihq/gitlab-sonar-scanner
+  image: chrisduong/gitlab-sonar-scanner
   variables:
     SONAR_URL: http://your.sonarqube.server
     SONAR_ANALYSIS_MODE: issues
@@ -53,7 +55,7 @@ stages:
 
 sonarqube-reports:
   stage: analysis
-  image: ciricihq/gitlab-sonar-scanner
+  image: chrisduong/gitlab-sonar-scanner
   variables:
     SONAR_URL: http://your.sonarqube.server
     SONAR_ANALYSIS_MODE: publish
